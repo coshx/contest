@@ -1,0 +1,46 @@
+@import "bourbon";
+@import "grid-settings";
+@import "neat";
+
+$spring-blue: #266287;
+$light-gray: #adadad;
+
+header {
+  background-color: $spring-blue;
+  border-bottom: 1px solid grey;
+}
+
+.big-column {
+  @include outer-container;
+}
+
+#hero {
+  background-color: $spring-blue;
+
+  #introduction {
+    @include span-columns(8);
+    button#submit-email {
+      @include button(simple, red);
+    }
+  }
+
+  #iphone {
+    @include span-columns(4);
+  }
+}
+
+#details {
+  background-color: $light-gray;
+  text-align: center;
+  padding-top: 3em;
+  h1 {
+    margin-top: 0px;
+  }
+
+  .reason {
+    @include media($mobile) {
+      @include span-columns(3);
+    }
+    @include span-columns(4);
+  }
+}
